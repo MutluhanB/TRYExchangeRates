@@ -8,6 +8,7 @@ lastValE=0
 LastTimeE=0
 print("Tracking Started At : " + str(getTime()))
 while True:
+    time.sleep(60)
     dollarRate = getDollarTryRate()
     euroRate = getEuroTryRate()
 
