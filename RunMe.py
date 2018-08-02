@@ -24,3 +24,6 @@ while True:
 
     while ((lastValD == getDollarTryRate()) and (lastValE == getEuroTryRate())):
         time.sleep(60)
+
+print("! Error Occured !")
+input()
