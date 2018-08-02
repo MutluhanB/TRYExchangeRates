@@ -1,18 +1,19 @@
 import json
 from urllib.request import urlopen
 
-with urlopen("https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=EUR&to_currency=TRY&apikey=5Y57NAHCNN1GRX1O") as euroRequest:
-    euroSource = euroRequest.read()
-euroData = json.loads(euroSource)
+def checkE():
+    with urlopen("https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=EUR&to_currency=TRY&apikey=5Y57NAHCNN1GRX1O") as euroRequest:
+        euroSource = euroRequest.read()
+        euroData = json.loads(euroSource)
+        return euroData
 
 def getEuroName():
     euroName = euroData["Realtime Currency Exchange Rate"]["2. From_Currency Name"]
     return euroName
 
 def getEuroTryRate():
-    euroRate = euroData["Realtime Currency Exchange Rate"]["5. Exchange Rate"]
+    euroRate = checkE()["Realtime Currency Exchange Rate"]["5. Exchange Rate"]
     return euroRate
 
-def getEuroRefTime():
-    euroRefTime = euroData["Realtime Currency Exchange Rate"]["6. Last Refreshed"]
-    return euroRefTime
+def checkEuroData():
+    return euroData

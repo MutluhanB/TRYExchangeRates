@@ -12,9 +12,3 @@ def getSterlingName():
 def getSterlingTryRate():
     sterlingRate = sterlingData["Realtime Currency Exchange Rate"]["5. Exchange Rate"]
     return sterlingRate
-
-def getSterlingRefTime():
-    sterlingRefTime = sterlingData["Realtime Currency Exchange Rate"]["6. Last Refreshed"]
-
-    return sterlingRefTime
-
