@@ -8,7 +8,7 @@ lastValE=0
 LastTimeE=0
 print("Tracking Started At : " + str(getTime()))
 while True:
-    time.sleep(60)
+    time.sleep(61)
     dollarRate = getDollarTryRate()
     euroRate = getEuroTryRate()
 
@@ -22,9 +22,7 @@ while True:
     print("USD/TRY: " + str(dollarRate) + " Last Updated At : " + str(lastTimeD))
     print("EUR/TRY: " + str(euroRate) + " Last Updated At : " + str(lastTimeE))
     print("\n")
-
+    time.sleep(61)
     while ((lastValD == getDollarTryRate()) and (lastValE == getEuroTryRate())):
-        time.sleep(60)
-
-print("! Error Occured !")
-input()
+        time.sleep(61)
+ 
